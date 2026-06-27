@@ -8,7 +8,8 @@
       --orange: #ff812f;
       --purple: #9b55ff;
       --yellow: #f8b640;
-      --logo-tile: var(--orange);
+      --gradient: linear-gradient(135deg, var(--orange), var(--pink) 52%, var(--purple));
+      --logo-tile: var(--gradient);
       --max: 1820px;
       --gutter: 96px;
       --hero-height: clamp(680px, 78svh, 820px);
