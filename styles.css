@@ -1885,9 +1885,9 @@
       display: grid;
       grid-template-columns: auto minmax(0, 1fr);
       align-items: center;
-      justify-self: center;
+      justify-self: stretch;
       gap: 14px;
-      width: min(100%, 760px);
+      width: 100%;
       min-height: 72px;
       padding: 14px 18px;
       border: 1px solid rgba(255, 255, 255, 0.13);
