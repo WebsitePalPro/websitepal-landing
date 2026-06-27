@@ -8,6 +8,7 @@
       --orange: #ff812f;
       --purple: #9b55ff;
       --yellow: #f8b640;
+      --logo-tile: #fff1e5;
       --max: 1820px;
       --gutter: 96px;
       --hero-height: clamp(680px, 78svh, 820px);
@@ -99,10 +100,10 @@
       justify-content: center;
       width: 146px;
       height: 58px;
-      border: 1px solid rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 129, 47, 0.34);
       border-radius: 16px;
       padding: 9px 12px;
-      background: rgba(255, 255, 255, 0.94);
+      background: var(--logo-tile);
       box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
       line-height: 1;
       transition: width 220ms ease, height 220ms ease, border-radius 220ms ease, transform 220ms ease, box-shadow 220ms ease;
@@ -196,7 +197,7 @@
       background:
         linear-gradient(90deg, rgba(13, 13, 14, 0.96) 0%, rgba(13, 13, 14, 0.92) 42%, rgba(13, 13, 14, 0.74) 62%, rgba(13, 13, 14, 0.58) 100%),
         linear-gradient(180deg, rgba(13, 13, 14, 0.18), rgba(13, 13, 14, 0.94)),
-        url("assets/websitepal-hero.png") center / cover no-repeat;
+        var(--black);
     }
 
     .hero-wrap:before,
@@ -1296,7 +1297,7 @@
     }
 
     .process-detail {
-      --process-bg: url("assets/websitepal-hero.png");
+      --process-bg: url("assets/step-3.webp");
       position: relative;
       display: grid;
       align-content: start;
@@ -1896,10 +1897,10 @@
       justify-content: center;
       width: 152px;
       height: 66px;
-      border: 1px solid rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 129, 47, 0.34);
       border-radius: 16px;
       padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.94);
+      background: var(--logo-tile);
       box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
     }
 
@@ -1980,9 +1981,10 @@
 
     .sticky-contact-text span {
       color: white;
-      font-size: clamp(0.96rem, 1.08vw, 1.08rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
+      font-size: clamp(0.82rem, 0.9vw, 0.94rem);
+      font-weight: 400;
+      line-height: 1.24;
+      letter-spacing: 0;
     }
 
     .sticky-contact-icon svg,
@@ -2658,15 +2660,13 @@
     .process-card h3,
     .price-monthly strong,
     .price-monthly span,
-    .sticky-cta-copy strong,
-    .sticky-contact-text span {
+    .sticky-cta-copy strong {
       line-height: var(--lh-card);
       letter-spacing: var(--ls-tight);
     }
 
     .feature-copy strong,
-    .trade-item,
-    .sticky-contact-text span {
+    .trade-item {
       font-size: var(--fs-card-title);
       font-weight: var(--weight-ui);
     }
@@ -2853,8 +2853,7 @@
     .price-monthly,
     .value-item h3,
     .help-item,
-    .sticky-cta-copy strong,
-    .sticky-contact-text span {
+    .sticky-cta-copy strong {
       font-weight: var(--weight-label);
     }
 
@@ -2871,6 +2870,13 @@
 
     .subline {
       font-weight: var(--weight-copy-strong);
+    }
+
+    .sticky-contact-text span {
+      font-size: clamp(0.82rem, 0.9vw, 0.94rem);
+      font-weight: 400;
+      line-height: 1.24;
+      letter-spacing: 0;
     }
 
     @media (max-width: 680px) {

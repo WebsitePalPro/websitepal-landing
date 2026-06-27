@@ -65,28 +65,28 @@
         description: "Tell us what you do, where you work and some general details on your services, philosophy and team.",
         points: ["Basic company info", "Services and areas covered"],
         status: "Brief status: Ready",
-        image: "assets/elmec-website.jpg"
+        image: "assets/step-1.webp"
       },
       images: {
         title: "Upload your images",
         description: "Send us what you have: logo, project photos, team images, service images and anything that you want to promote on your new webpage.",
         points: ["Logo and site photos", "Project image upload"],
         status: "Image library: Uploading",
-        image: "assets/sjr-services-website.jpg"
+        image: "assets/step-2.webp"
       },
       build: {
         title: "We build it",
         description: "One of our dedicated developers with experience building websites for companies like yours gets your build going, with as much input from yourselves as you want.",
         points: ["Developer-led build", "Account manager support"],
         status: "Build progress: In motion",
-        image: "assets/websitepal-hero.png"
+        image: "assets/step-3.webp"
       },
       launch: {
         title: "Review & launch",
         description: "You check the draft, send any changes, and once you are happy we launch it properly so it is ready to get you some inbound leads.",
         points: ["Review the draft", "Launch when approved"],
         status: "Website status: Live",
-        image: "assets/terranova-website.jpg"
+        image: "assets/step-4.webp"
       }
     };
 
