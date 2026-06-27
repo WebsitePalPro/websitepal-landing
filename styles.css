@@ -2880,6 +2880,48 @@
       letter-spacing: 0;
     }
 
+    .sticky-cta.is-expanded {
+      max-height: min(430px, calc(100dvh - 24px));
+      padding-top: clamp(18px, 1.8vw, 30px);
+    }
+
+    .sticky-cta.is-expanded .sticky-cta-bar {
+      min-height: 74px;
+      padding: 14px clamp(18px, 1.8vw, 28px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 20px;
+      background:
+        linear-gradient(90deg, rgba(255, 129, 47, 0.18), rgba(255, 46, 141, 0.14) 52%, rgba(155, 85, 255, 0.18)),
+        rgba(255, 255, 255, 0.045);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 22px 55px rgba(0, 0, 0, 0.22);
+    }
+
+    .sticky-cta.is-expanded .sticky-cta-copy strong {
+      font-size: clamp(1.1rem, 1.36vw, 1.62rem);
+      letter-spacing: -0.04em;
+    }
+
+    .sticky-cta.is-expanded .sticky-cta-more {
+      padding-block: clamp(22px, 2.1vw, 34px) clamp(28px, 2.7vw, 44px);
+    }
+
+    @media (max-width: 680px) {
+      .sticky-cta.is-expanded {
+        max-height: calc(100dvh - 16px);
+        padding-top: 12px;
+      }
+
+      .sticky-cta.is-expanded .sticky-cta-bar {
+        min-height: auto;
+        padding: 16px;
+        border-radius: 18px;
+      }
+
+      .sticky-cta.is-expanded .sticky-cta-more {
+        padding-block: 18px 28px;
+      }
+    }
+
     .eyebrow,
     .examples-kicker,
     .why-kicker,
