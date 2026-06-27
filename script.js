@@ -185,8 +185,9 @@
 
     const updateStickyCta = () => {
       if (!stickyCta) return;
-      const distanceFromBottom = document.documentElement.scrollHeight - (window.scrollY + window.innerHeight);
-      stickyCta.classList.toggle("is-expanded", distanceFromBottom < 90);
+      const viewportBottom = window.scrollY + window.innerHeight;
+      const footerTrigger = stickyCta.offsetTop - 90;
+      stickyCta.classList.toggle("is-expanded", viewportBottom >= footerTrigger);
     };
 
     let scrollTicking = false;

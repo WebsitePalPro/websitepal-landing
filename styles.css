@@ -35,7 +35,7 @@
       position: relative;
       min-height: 100vh;
       overflow: hidden;
-      padding-bottom: clamp(300px, 36vh, 430px);
+      padding-bottom: clamp(340px, 40vh, 520px);
       background:
         radial-gradient(circle at 16% 20%, rgba(255, 46, 141, 0.16), transparent 26%),
         radial-gradient(circle at 78% 14%, rgba(155, 85, 255, 0.18), transparent 28%),
@@ -2953,13 +2953,67 @@
       letter-spacing: 0;
     }
 
+    .sticky-cta {
+      position: relative;
+      z-index: 30;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      width: 100%;
+      max-height: none;
+      overflow: visible;
+      border-width: 1px 0 0;
+      border-radius: 0;
+      background:
+        radial-gradient(circle at 84% 8%, rgba(155, 85, 255, 0.24), transparent 34%),
+        radial-gradient(circle at 20% 0%, rgba(255, 46, 141, 0.2), transparent 34%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.024)),
+        rgba(12, 12, 14, 0.96);
+      box-shadow: 0 -24px 70px rgba(0, 0, 0, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: none;
+    }
+
+    .sticky-cta:not(.is-expanded) {
+      height: 0;
+      max-height: 0;
+      overflow: visible;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .sticky-cta:not(.is-expanded) .sticky-cta-bar {
+      position: fixed;
+      z-index: 40;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: min(var(--max), calc(100% - var(--gutter)));
+      min-height: 86px;
+      margin: 0 auto;
+      padding: 14px 0;
+      border: 0;
+      border-radius: 0;
+      background:
+        linear-gradient(90deg, rgba(255, 129, 47, 0.95), rgba(255, 46, 141, 0.92) 52%, rgba(155, 85, 255, 0.94)),
+        linear-gradient(128deg, transparent 0 79%, rgba(255, 255, 255, 0.18) 79.05%, transparent 79.34%);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.52), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    }
+
+    .sticky-cta:not(.is-expanded) .sticky-cta-more {
+      display: none;
+    }
+
     .sticky-cta.is-expanded {
-      max-height: min(520px, calc(100dvh - 24px));
+      max-height: none;
       padding-top: clamp(18px, 1.8vw, 30px);
     }
 
     .sticky-cta.is-expanded .sticky-cta-bar {
+      position: relative;
       min-height: 74px;
+      width: min(var(--max), calc(100% - var(--gutter)));
+      margin: 0 auto;
       padding: 14px clamp(18px, 1.8vw, 28px);
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 12px;
@@ -2975,24 +3029,40 @@
     }
 
     .sticky-cta.is-expanded .sticky-cta-more {
-      max-height: 390px;
+      display: grid;
+      max-height: none;
+      opacity: 1;
       padding-block: clamp(18px, 1.7vw, 28px) clamp(28px, 2.7vw, 44px);
+      transform: none;
     }
 
     @media (max-width: 680px) {
+      .sticky-cta:not(.is-expanded) .sticky-cta-bar {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        min-height: 152px;
+        width: min(100% - 24px, var(--max));
+        padding: 18px 0;
+      }
+
       .sticky-cta.is-expanded {
-        max-height: calc(100dvh - 16px);
+        max-height: none;
         padding-top: 12px;
+        overflow: visible;
       }
 
       .sticky-cta.is-expanded .sticky-cta-bar {
+        grid-template-columns: 1fr;
+        gap: 12px;
         min-height: auto;
+        width: min(100% - 24px, var(--max));
         padding: 16px;
         border-radius: 12px;
       }
 
       .sticky-cta.is-expanded .sticky-cta-more {
         max-height: none;
+        width: min(100% - 24px, var(--max));
         padding-block: 18px 28px;
       }
 
