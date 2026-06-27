@@ -615,7 +615,7 @@
       aspect-ratio: 16 / 9;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 20px;
+      border-radius: 12px;
       background: #202022;
       box-shadow: 0 32px 80px rgba(0, 0, 0, 0.38);
       scroll-snap-align: start;
@@ -964,7 +964,7 @@
     .comparison-panel {
       min-height: 260px;
       border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
+      border-radius: 12px;
       padding: 34px 38px 40px;
       background:
         radial-gradient(circle at 16% 0%, rgba(255, 255, 255, 0.08), transparent 38%),
@@ -1164,7 +1164,7 @@
       min-width: 0;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 18px;
+      border-radius: 11px;
       background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018)),
         rgba(13, 13, 14, 0.72);
@@ -1307,7 +1307,7 @@
       margin: 0;
       padding: 54px 54px 124px;
       border: 1px solid rgba(255, 46, 141, 0.36);
-      border-radius: 20px;
+      border-radius: 12px;
       background: #111;
       box-shadow: 0 34px 90px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(255, 255, 255, 0.035);
       overflow: hidden;
@@ -1472,7 +1472,7 @@
       position: relative;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.17);
-      border-radius: 20px;
+      border-radius: 12px;
       background:
         radial-gradient(circle at 18% 0%, rgba(255, 255, 255, 0.09), transparent 40%),
         linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.02)),
@@ -1688,7 +1688,7 @@
       align-content: center;
       min-height: 190px;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 20px;
+      border-radius: 12px;
       padding: 24px 20px;
       background:
         radial-gradient(circle at 72% 22%, rgba(255, 46, 141, 0.12), transparent 38%),
@@ -1745,7 +1745,7 @@
       align-items: stretch;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 20px;
+      border-radius: 12px;
       background:
         radial-gradient(circle at 16% 0%, rgba(255, 46, 141, 0.1), transparent 36%),
         linear-gradient(90deg, rgba(255, 255, 255, 0.042), rgba(255, 255, 255, 0.064), rgba(255, 255, 255, 0.038)),
@@ -1891,7 +1891,7 @@
       min-height: 72px;
       padding: 14px 18px;
       border: 1px solid rgba(255, 255, 255, 0.13);
-      border-radius: 12px;
+      border-radius: 8px;
       background:
         linear-gradient(135deg, rgba(37, 211, 102, 0.12), rgba(255, 255, 255, 0.045)),
         rgba(255, 255, 255, 0.035);
@@ -2005,7 +2005,7 @@
       list-style: none;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 18px;
+      border-radius: 11px;
       background:
         linear-gradient(90deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.026)),
         rgba(255, 255, 255, 0.025);
@@ -2430,7 +2430,7 @@
       .comparison-panel {
         min-height: auto;
         padding: 28px 20px;
-        border-radius: 20px;
+        border-radius: 12px;
       }
 
       .comparison-list {
@@ -2504,7 +2504,7 @@
         margin-top: 0;
         min-height: 520px;
         padding: 30px 24px 178px;
-        border-radius: 18px;
+        border-radius: 11px;
       }
 
       .process-detail-copy {
@@ -2527,7 +2527,7 @@
 
       .pricing-card,
       .value-panel {
-        border-radius: 20px;
+        border-radius: 12px;
       }
 
       .value-panel {
@@ -3016,7 +3016,7 @@
       margin: 0 auto;
       padding: 14px clamp(18px, 1.8vw, 28px);
       border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 12px;
+      border-radius: 8px;
       background:
         linear-gradient(90deg, rgba(255, 129, 47, 0.18), rgba(255, 46, 141, 0.14) 52%, rgba(155, 85, 255, 0.18)),
         rgba(255, 255, 255, 0.045);
@@ -3057,7 +3057,7 @@
         min-height: auto;
         width: min(100% - 24px, var(--max));
         padding: 16px;
-        border-radius: 12px;
+        border-radius: 8px;
       }
 
       .sticky-cta.is-expanded .sticky-cta-more {
