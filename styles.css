@@ -71,11 +71,11 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 146px;
-      height: 58px;
+      width: 112px;
+      height: 78px;
       border: 1px solid rgba(255, 129, 47, 0.34);
       border-radius: 16px;
-      padding: 9px 12px;
+      padding: 7px;
       background: var(--logo-tile);
       box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
     }
@@ -188,11 +188,11 @@
       justify-self: end;
       align-items: center;
       justify-content: center;
-      width: 146px;
-      height: 58px;
+      width: 112px;
+      height: 78px;
       border: 1px solid rgba(255, 129, 47, 0.34);
       border-radius: 16px;
-      padding: 9px 12px;
+      padding: 7px;
       background: var(--logo-tile);
       box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
       line-height: 1;
@@ -210,8 +210,8 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: 128px;
-      height: 54px;
+      width: 98px;
+      height: 70px;
       border-radius: 0 0 0 14px;
       box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
     }
@@ -2091,11 +2091,11 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 152px;
-      height: 66px;
+      width: 116px;
+      height: 82px;
       border: 1px solid rgba(255, 129, 47, 0.34);
       border-radius: 16px;
-      padding: 10px 14px;
+      padding: 7px;
       background: var(--logo-tile);
       box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
     }
@@ -2406,17 +2406,17 @@
       }
 
       .site-logo {
-        width: 108px;
-        height: 46px;
-        padding: 7px 9px;
+        width: 86px;
+        height: 62px;
+        padding: 6px;
       }
 
       .site-header.is-scrolled .site-logo {
         top: 0;
         right: 0;
         left: auto;
-        width: 104px;
-        height: 44px;
+        width: 82px;
+        height: 58px;
         border-radius: 0 0 0 12px;
       }
 
@@ -3283,9 +3283,9 @@
       }
 
       .legal-logo {
-        width: 108px;
-        height: 46px;
-        padding: 7px 9px;
+        width: 86px;
+        height: 62px;
+        padding: 6px;
       }
 
       .legal-card {
