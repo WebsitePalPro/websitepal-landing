@@ -131,6 +131,55 @@
       line-height: 1.45;
     }
 
+    .legal-doc {
+      align-items: start;
+    }
+
+    .legal-doc .legal-meta {
+      display: inline-flex;
+      width: fit-content;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.06);
+      color: rgba(255, 248, 251, 0.68);
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+
+    .legal-doc h2 {
+      margin: 16px 0 -8px;
+      color: white;
+      font-size: clamp(1.38rem, 2.2vw, 2.15rem);
+      font-weight: 1000;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .legal-doc ul {
+      display: grid;
+      gap: 10px;
+      margin: -6px 0 0;
+      padding-left: 22px;
+      color: rgba(255, 248, 251, 0.74);
+      font-size: clamp(1rem, 1.45vw, 1.15rem);
+      font-weight: 700;
+      line-height: 1.52;
+    }
+
+    .legal-doc li::marker {
+      color: var(--orange);
+    }
+
+    .legal-doc a {
+      color: white;
+      font-weight: 900;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 129, 47, 0.7);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.18em;
+    }
+
     html {
       scroll-behavior: smooth;
     }
