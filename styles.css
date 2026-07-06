@@ -1,4 +1,5 @@
     :root {
+      --font-body: "Avenir Next", "Helvetica Neue", Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --black: #0d0d0e;
       --panel: rgba(255, 255, 255, 0.06);
       --line: rgba(255, 255, 255, 0.15);
@@ -23,7 +24,7 @@
       margin: 0;
       background: var(--black);
       color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: var(--font-body);
     }
 
     a {
@@ -2782,7 +2783,7 @@
       more consistent type system.
     */
     :root {
-      --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-body: "Avenir Next", "Helvetica Neue", Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
       --fs-eyebrow: clamp(0.76rem, 0.86vw, 0.94rem);
       --fs-ui: clamp(0.84rem, 0.88vw, 0.96rem);
@@ -3025,12 +3026,12 @@
     }
 
     /*
-      Inter refined pass.
+      Typography refinement pass.
       Keeps the strong 900+ display voice, but makes navigation, buttons,
       eyebrows and small labels less bulky.
     */
     :root {
-      --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-body: "Avenir Next", "Helvetica Neue", Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --weight-heading: 950;
       --weight-display: 950;
       --weight-eyebrow: 680;
@@ -3340,4 +3341,1075 @@
       .legal-card {
         padding: 28px 22px;
       }
+    }
+
+    /* WebsitePal blue-red trade palette */
+    :root {
+      --black: #07131f;
+      --panel: rgba(255, 255, 255, 0.075);
+      --line: rgba(255, 255, 255, 0.16);
+      --text: #fffaf0;
+      --muted: #c7d6df;
+      --pink: #e53935;
+      --orange: #ffd14a;
+      --purple: #1268a6;
+      --yellow: #ffd14a;
+      --gradient: linear-gradient(135deg, #e53935 0%, #e53935 68%, #ffd14a 100%);
+      --logo-tile: linear-gradient(135deg, #e53935 0%, #f2b52b 56%, #ffd14a 100%);
+    }
+
+    body {
+      background: #07131f;
+      color: var(--text);
+    }
+
+    .landing-shell {
+      background:
+        linear-gradient(126deg, transparent 0 51%, rgba(229, 57, 53, 0.22) 51.08%, transparent 51.45%),
+        radial-gradient(circle at 10% 12%, rgba(229, 57, 53, 0.22), transparent 28%),
+        radial-gradient(circle at 86% 8%, rgba(18, 104, 166, 0.36), transparent 34%),
+        linear-gradient(180deg, #07131f 0%, #0e2b43 46%, #07131f 100%);
+    }
+
+    .site-nav {
+      position: relative;
+    }
+
+    .nav-links {
+      justify-self: end;
+      width: fit-content;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      padding: 8px 16px;
+      background: rgba(7, 19, 31, 0.56);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09), 0 20px 46px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-links a {
+      color: rgba(255, 250, 240, 0.86);
+    }
+
+    .nav-links a:after {
+      background: linear-gradient(90deg, var(--pink) 0%, var(--pink) 68%, var(--yellow) 100%);
+    }
+
+    .site-logo,
+    .sticky-logo,
+    .legal-logo {
+      border: 0;
+      border-radius: 8px;
+      background: var(--logo-tile);
+      box-shadow: 0 18px 42px rgba(2, 8, 14, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-wrap {
+      background:
+        linear-gradient(90deg, rgba(7, 19, 31, 0.98) 0%, rgba(7, 19, 31, 0.92) 44%, rgba(7, 19, 31, 0.68) 68%, rgba(7, 19, 31, 0.5) 100%),
+        linear-gradient(180deg, rgba(7, 19, 31, 0.2), rgba(7, 19, 31, 0.96)),
+        #07131f;
+    }
+
+    .hero-wrap:before {
+      background:
+        linear-gradient(126deg, transparent 0 28%, rgba(229, 57, 53, 0.78) 28.08%, rgba(229, 57, 53, 0.78) 28.9%, transparent 29.02%),
+        linear-gradient(126deg, transparent 0 33%, rgba(255, 209, 74, 0.72) 33.08%, rgba(255, 209, 74, 0.72) 33.62%, transparent 33.74%),
+        linear-gradient(126deg, transparent 0 74%, rgba(18, 104, 166, 0.72) 74.08%, rgba(18, 104, 166, 0.72) 74.86%, transparent 74.98%);
+      opacity: 0.96;
+    }
+
+    .hero-wrap:after {
+      inset: auto -18% -18% 28%;
+      height: 330px;
+      background: radial-gradient(ellipse at center, rgba(18, 104, 166, 0.52), transparent 70%);
+    }
+
+    .hero-visual-space:before {
+      background:
+        radial-gradient(ellipse at 42% 38%, rgba(229, 57, 53, 0.42), transparent 58%),
+        radial-gradient(ellipse at 68% 36%, rgba(18, 104, 166, 0.44), transparent 62%),
+        radial-gradient(ellipse at 20% 48%, rgba(255, 209, 74, 0.18), transparent 58%);
+    }
+
+    .hero-visual-image {
+      filter: drop-shadow(0 34px 80px rgba(0, 0, 0, 0.5)) saturate(1.08) contrast(1.04);
+    }
+
+    h1,
+    .examples-title,
+    .why-title,
+    .process-title,
+    .pricing-card h2 {
+      color: #fffaf0;
+      text-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+    }
+
+    .process-card.is-active .process-number,
+    .value-header h2,
+    .extras-header h3 {
+      background: linear-gradient(90deg, var(--pink) 0%, var(--pink) 68%, var(--yellow) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subline strong,
+    .comparison-panel h3 {
+      background: none;
+      -webkit-background-clip: border-box;
+      background-clip: border-box;
+      color: #fffaf0;
+      -webkit-text-fill-color: #fffaf0;
+    }
+
+    .price-main strong {
+      background: linear-gradient(90deg, var(--pink), #f2b52b 54%, var(--yellow));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .keyword-reel span {
+      background: linear-gradient(90deg, var(--pink), var(--yellow));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .eyebrow,
+    .examples-kicker,
+    .why-kicker,
+    .process-kicker,
+    .pricing-kicker,
+    .value-header h2,
+    .extras-header h3 {
+      border-color: rgba(255, 209, 74, 0.34);
+      background:
+        linear-gradient(135deg, rgba(229, 57, 53, 0.18), rgba(255, 209, 74, 0.08)),
+        rgba(7, 19, 31, 0.52);
+      -webkit-background-clip: border-box;
+      background-clip: border-box;
+      color: rgba(255, 250, 240, 0.9);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 16px 32px rgba(0, 0, 0, 0.16);
+    }
+
+    .eyebrow:before,
+    .examples-kicker:before,
+    .why-kicker:before,
+    .process-kicker:before,
+    .pricing-kicker:before,
+    .value-header h2:before,
+    .extras-header h3:before {
+      background: var(--yellow);
+      box-shadow: 0 0 18px rgba(255, 209, 74, 0.42);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #e53935, #f2b52b 58%, #ffd14a);
+      box-shadow: 0 20px 48px rgba(229, 57, 53, 0.3);
+    }
+
+    .btn-secondary {
+      border-color: rgba(255, 209, 74, 0.55);
+      background: rgba(7, 19, 31, 0.62);
+    }
+
+    .icon-strip,
+    .feature-strip-wrap {
+      border-color: rgba(255, 255, 255, 0.14);
+      background:
+        linear-gradient(90deg, rgba(229, 57, 53, 0.16), rgba(255, 209, 74, 0.1), rgba(18, 104, 166, 0.18)),
+        #0a2438;
+    }
+
+    .trade-icon,
+    .feature-icon svg,
+    .help-item svg {
+      color: var(--yellow);
+      stroke: currentColor;
+    }
+
+    .examples-section,
+    .process-section {
+      background:
+        linear-gradient(126deg, transparent 0 16%, rgba(229, 57, 53, 0.12) 16.04%, transparent 16.34%),
+        linear-gradient(126deg, transparent 0 84%, rgba(18, 104, 166, 0.14) 84.04%, transparent 84.34%),
+        #f3eee2;
+      color: #07131f;
+    }
+
+    .examples-section {
+      padding-bottom: 0;
+    }
+
+    .examples-section:before,
+    .process-section:before {
+      background:
+        linear-gradient(126deg, transparent 0 8%, rgba(229, 57, 53, 0.22) 8.04%, transparent 8.24%),
+        linear-gradient(126deg, transparent 0 90%, rgba(18, 104, 166, 0.2) 90.04%, transparent 90.28%);
+      opacity: 0.8;
+    }
+
+    .examples-title,
+    .process-title {
+      color: #07131f;
+      text-shadow: none;
+    }
+
+    .examples-sub,
+    .process-intro,
+    .gallery-hint {
+      color: rgba(7, 19, 31, 0.72);
+    }
+
+    .examples-section .examples-kicker,
+    .process-section .process-kicker {
+      border-color: rgba(18, 104, 166, 0.18);
+      background: rgba(255, 255, 255, 0.78);
+      color: #0b2b44;
+      box-shadow: 0 14px 32px rgba(7, 19, 31, 0.09);
+    }
+
+    .example-card {
+      border-color: rgba(7, 19, 31, 0.16);
+      background: #fffaf0;
+      box-shadow: 0 14px 32px rgba(7, 19, 31, 0.12);
+    }
+
+    .example-card:hover {
+      transform: translateZ(0);
+      border-color: rgba(229, 57, 53, 0.58);
+      box-shadow: 0 18px 38px rgba(7, 19, 31, 0.16);
+    }
+
+    .example-gallery-shell:before,
+    .example-gallery-shell:after {
+      display: none;
+    }
+
+    .gallery-progress {
+      background: rgba(7, 19, 31, 0.12);
+    }
+
+    .gallery-progress span {
+      background: linear-gradient(90deg, var(--pink) 0%, var(--pink) 68%, var(--yellow) 100%);
+    }
+
+    .why-section {
+      background:
+        radial-gradient(circle at 20% 10%, rgba(229, 57, 53, 0.24), transparent 30%),
+        radial-gradient(circle at 76% 30%, rgba(18, 104, 166, 0.42), transparent 32%),
+        linear-gradient(126deg, transparent 0 36%, rgba(255, 209, 74, 0.14) 36.06%, transparent 36.36%),
+        linear-gradient(180deg, #06101b 0%, #0d2a42 50%, #07131f 100%);
+    }
+
+    .keyword-ghosts {
+      color: rgba(255, 250, 240, 0.1);
+    }
+
+    .keyword-stage:before {
+      background:
+        radial-gradient(ellipse at center, rgba(229, 57, 53, 0.34), transparent 58%),
+        radial-gradient(ellipse at 74% 52%, rgba(18, 104, 166, 0.34), transparent 54%);
+    }
+
+    .comparison-panel,
+    .pricing-card,
+    .value-item,
+    .help-strip,
+    .process-left {
+      border-color: rgba(255, 255, 255, 0.16);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(255, 209, 74, 0.09), transparent 38%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.078), rgba(255, 255, 255, 0.024)),
+        rgba(7, 19, 31, 0.78);
+      box-shadow: 0 28px 72px rgba(2, 8, 14, 0.28);
+    }
+
+    .comparison-panel.highlight,
+    .pricing-card {
+      border-color: rgba(229, 57, 53, 0.44);
+      background:
+        radial-gradient(circle at 84% 10%, rgba(18, 104, 166, 0.26), transparent 40%),
+        radial-gradient(circle at 8% 8%, rgba(229, 57, 53, 0.18), transparent 38%),
+        linear-gradient(135deg, rgba(255, 209, 74, 0.08), rgba(255, 255, 255, 0.026)),
+        rgba(7, 19, 31, 0.88);
+    }
+
+    .comparison-icon,
+    .highlight .comparison-icon {
+      border-color: rgba(255, 209, 74, 0.65);
+      color: var(--yellow);
+      background: radial-gradient(circle, rgba(255, 209, 74, 0.15), rgba(255, 255, 255, 0.02));
+    }
+
+    .vs-badge {
+      background:
+        linear-gradient(#07131f, #07131f) padding-box,
+        linear-gradient(135deg, var(--pink) 0%, var(--pink) 68%, var(--yellow) 100%) border-box;
+    }
+
+    .process-left {
+      background: #fffaf0;
+      border-color: rgba(7, 19, 31, 0.14);
+      box-shadow: 0 24px 58px rgba(7, 19, 31, 0.16);
+    }
+
+    .process-card {
+      color: #07131f;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .process-card + .process-card {
+      border-top-color: rgba(7, 19, 31, 0.12);
+    }
+
+    .process-card:hover,
+    .process-card:focus-visible,
+    .process-card.is-active {
+      background:
+        linear-gradient(90deg, rgba(229, 57, 53, 0.12), rgba(18, 104, 166, 0.08)),
+        #fffaf0;
+      box-shadow: inset 4px 0 0 rgba(229, 57, 53, 0.86);
+    }
+
+    .process-card:after {
+      background: linear-gradient(180deg, var(--pink) 0%, var(--pink) 68%, var(--yellow) 100%);
+    }
+
+    .process-icon,
+    .process-card.is-active .process-icon {
+      color: var(--purple);
+    }
+
+    .process-number,
+    .process-card h3 {
+      color: #07131f;
+    }
+
+    .process-detail {
+      border-color: rgba(18, 104, 166, 0.42);
+      box-shadow: 0 30px 76px rgba(7, 19, 31, 0.26);
+    }
+
+    .process-detail:after {
+      background:
+        radial-gradient(circle at 88% 12%, rgba(18, 104, 166, 0.32), transparent 34%),
+        linear-gradient(90deg, rgba(7, 19, 31, 0.92) 0%, rgba(7, 19, 31, 0.72) 48%, rgba(7, 19, 31, 0.42) 100%),
+        linear-gradient(180deg, rgba(7, 19, 31, 0.18), rgba(7, 19, 31, 0.9));
+    }
+
+    .pricing-section {
+      background:
+        linear-gradient(126deg, transparent 0 18%, rgba(229, 57, 53, 0.28) 18.06%, transparent 18.36%),
+        linear-gradient(126deg, transparent 0 84%, rgba(255, 209, 74, 0.18) 84.04%, transparent 84.3%),
+        radial-gradient(circle at 88% 22%, rgba(18, 104, 166, 0.34), transparent 31%),
+        linear-gradient(180deg, #07131f 0%, #102f49 52%, #07131f 100%);
+    }
+
+    .price-list li,
+    .process-pill,
+    .help-item {
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .price-list svg,
+    .process-pill svg {
+      stroke: var(--yellow);
+    }
+
+    .sticky-cta,
+    .sticky-cta:not(.is-expanded) .sticky-cta-bar,
+    .sticky-footer-cta {
+      background:
+        linear-gradient(90deg, rgba(229, 57, 53, 0.96) 0%, rgba(229, 57, 53, 0.96) 68%, rgba(255, 209, 74, 0.96) 100%),
+        linear-gradient(126deg, transparent 0 78%, rgba(255, 255, 255, 0.24) 78.05%, transparent 78.38%);
+      box-shadow: 0 24px 70px rgba(2, 8, 14, 0.42);
+    }
+
+    .sticky-cta.is-expanded,
+    .sticky-footer {
+      background:
+        radial-gradient(circle at 12% 12%, rgba(229, 57, 53, 0.2), transparent 32%),
+        radial-gradient(circle at 86% 22%, rgba(18, 104, 166, 0.28), transparent 34%),
+        linear-gradient(180deg, #07131f 0%, #0b2438 100%);
+    }
+
+    .sticky-cta.is-expanded .sticky-cta-bar {
+      background: linear-gradient(90deg, rgba(229, 57, 53, 0.92) 0%, rgba(229, 57, 53, 0.92) 68%, rgba(255, 209, 74, 0.9) 100%);
+    }
+
+    .sticky-cta .btn {
+      background: rgba(7, 19, 31, 0.88);
+    }
+
+    .btn i {
+      flex: 0 0 auto;
+      font-size: 1em;
+      line-height: 1;
+    }
+
+    .gallery-button i {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .trade-icon,
+    .feature-icon {
+      color: var(--yellow);
+    }
+
+    .trade-icon i {
+      font-size: clamp(1.6rem, 2.1vw, 2.65rem);
+      line-height: 1;
+    }
+
+    .feature-icon i {
+      font-size: 1.65rem;
+      line-height: 1;
+    }
+
+    .comparison-icon i {
+      font-size: 2.1rem;
+      line-height: 1;
+    }
+
+    .process-icon i {
+      font-size: 1.12rem;
+      line-height: 1;
+      opacity: 0.46;
+    }
+
+    .process-pill i,
+    .price-list i {
+      flex: 0 0 20px;
+      color: var(--yellow);
+      font-size: 1rem;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .value-icon i {
+      font-size: 3.1rem;
+      line-height: 1;
+    }
+
+    .help-item i {
+      color: var(--yellow);
+      font-size: 1.55rem;
+      line-height: 1;
+    }
+
+    .sticky-whatsapp-card {
+      background:
+        linear-gradient(135deg, rgba(37, 211, 102, 0.12), rgba(18, 104, 166, 0.12)),
+        rgba(255, 255, 255, 0.045);
+    }
+
+    .sticky-footer-inner {
+      gap: 0;
+    }
+
+    .sticky-footer-grid {
+      grid-template-columns: minmax(240px, 1.05fr) minmax(210px, 0.85fr) minmax(260px, 1fr) minmax(190px, 0.72fr);
+      gap: clamp(20px, 2.5vw, 42px);
+      align-items: start;
+      overflow: visible;
+      border: 0;
+      border-radius: 0;
+      padding: clamp(4px, 0.8vw, 12px) 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .sticky-footer-grid .sticky-whatsapp-card {
+      align-self: start;
+      min-height: 0;
+      align-content: start;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .sticky-brand {
+      align-self: start;
+      position: relative;
+      align-content: start;
+      padding-left: clamp(18px, 1.8vw, 30px);
+      border-left: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    .sticky-contact-list {
+      grid-template-columns: 1fr;
+      justify-self: stretch;
+      width: 100%;
+      gap: 12px;
+      align-content: start;
+      border: 0;
+      border-radius: 0;
+      padding-left: clamp(18px, 1.8vw, 30px);
+      background: transparent;
+      border-left: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    .sticky-contact-list li + li {
+      border-left: 0;
+      border-top: 0;
+    }
+
+    .sticky-contact-list a {
+      min-height: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    .sticky-footer-links {
+      align-content: start;
+      justify-items: start;
+      justify-self: stretch;
+      text-align: left;
+      padding-left: clamp(18px, 1.8vw, 30px);
+      border-left: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    .sticky-whatsapp-icon i {
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .sticky-contact-icon {
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.15), transparent 36%),
+        linear-gradient(135deg, rgba(229, 57, 53, 0.32), rgba(18, 104, 166, 0.2));
+      color: var(--yellow);
+    }
+
+    .btn-primary {
+      color: #07131f;
+    }
+
+    .btn-primary:hover {
+      color: #07131f;
+    }
+
+    .sticky-whatsapp-copy .sticky-whatsapp-number {
+      display: inline-block;
+      width: fit-content;
+      white-space: nowrap;
+      color: rgba(255, 250, 240, 0.95);
+      font-weight: 820;
+      letter-spacing: 0;
+    }
+
+    .sticky-whatsapp-card:before,
+    .sticky-brand:before,
+    .sticky-contact-list:before,
+    .sticky-footer-links:before {
+      content: none;
+      display: none;
+    }
+
+    .sticky-whatsapp-card:hover,
+    .sticky-whatsapp-card:focus-visible {
+      background: transparent;
+      transform: none;
+    }
+
+    .sticky-contact-icon i,
+    .sticky-footer-links i {
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+        backdrop-filter: none;
+      }
+
+      .sticky-footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky-brand,
+      .sticky-contact-list,
+      .sticky-footer-links {
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.11);
+        padding-top: 18px;
+      }
+    }
+
+    /*
+      Typography polish.
+      The production stack reads cleaner with subtle
+      display tracking and fewer heavy intermediate weights.
+    */
+    :root {
+      --weight-heading: 800;
+      --weight-display: 900;
+      --weight-eyebrow: 600;
+      --weight-ui: 600;
+      --weight-label: 600;
+      --weight-copy: 400;
+      --weight-copy-strong: 600;
+
+      --ls-eyebrow: 0;
+      --ls-ui: 0;
+      --ls-copy: 0;
+      --ls-tight: -0.006em;
+      --ls-display: -0.008em;
+      --ls-hero: -0.012em;
+      --ls-logo: 0;
+    }
+
+    h1,
+    .examples-title,
+    .why-title,
+    .process-title,
+    .pricing-card h2,
+    .process-detail-copy h3,
+    .keyword-reel span,
+    .keyword-ghosts,
+    .keyword-long,
+    .price-main strong {
+      letter-spacing: -0.006em;
+    }
+
+    h1 {
+      font-weight: 900;
+      letter-spacing: var(--ls-hero);
+      line-height: 0.96;
+    }
+
+    .examples-title,
+    .why-title,
+    .process-title,
+    .pricing-card h2,
+    .process-detail-copy h3 {
+      font-weight: 800;
+      letter-spacing: var(--ls-display);
+      line-height: 1;
+    }
+
+    h1,
+    .why-title,
+    .pricing-card h2,
+    .process-detail-copy h3 {
+      color: #fff;
+      -webkit-text-fill-color: #fff;
+    }
+
+    .keyword-reel span,
+    .keyword-ghosts,
+    .keyword-long,
+    .price-main strong {
+      font-weight: 900;
+      line-height: 0.94;
+    }
+
+    .vs-badge,
+    .process-number {
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .subline,
+    .examples-sub,
+    .why-copy p,
+    .process-intro,
+    .process-detail-copy p,
+    .price-note,
+    .feature-copy span,
+    .sticky-brand p,
+    .sticky-footer-small,
+    .sticky-whatsapp-copy span {
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 1.56;
+    }
+
+    .subline strong,
+    .price-main span,
+    .price-monthly,
+    .trade-item,
+    .feature-copy strong,
+    .comparison-panel h3,
+    .comparison-item,
+    .process-card h3,
+    .value-item h3,
+    .help-item,
+    .sticky-cta-copy strong,
+    .sticky-whatsapp-copy strong {
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.2;
+    }
+
+    .nav-links a,
+    .btn,
+    .gallery-button,
+    .gallery-hint,
+    .process-pill,
+    .price-list li,
+    .sticky-footer-links a,
+    .sticky-contact-text span,
+    .sticky-whatsapp-copy .sticky-whatsapp-number {
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .eyebrow,
+    .examples-kicker,
+    .why-kicker,
+    .process-kicker,
+    .pricing-kicker,
+    .value-header h2,
+    .extras-header h3,
+    .strip-label,
+    .sticky-contact-text small {
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .sticky-cta.is-expanded .sticky-cta-copy strong {
+      letter-spacing: 0;
+    }
+
+    /*
+      Display casing and pale section polish.
+      Keeps the bolder signage feel, but makes the light panels less creamy.
+    */
+    :root {
+      --fs-section-title: clamp(3.15rem, 3.8vw, 6.75rem);
+      --fs-section-title-large: clamp(2.93rem, 4.76vw, 6.12rem);
+    }
+
+    h1,
+    .examples-title,
+    .why-title,
+    .process-title,
+    .pricing-card h2,
+    .value-header h2,
+    .process-detail-copy h3,
+    .sticky-cta-copy strong {
+      text-transform: uppercase;
+    }
+
+    .examples-section,
+    .process-section {
+      background:
+        linear-gradient(126deg, transparent 0 16%, rgba(229, 57, 53, 0.08) 16.04%, transparent 16.34%),
+        linear-gradient(126deg, transparent 0 84%, rgba(18, 104, 166, 0.12) 84.04%, transparent 84.34%),
+        #f7fbff;
+    }
+
+    .examples-section:before,
+    .process-section:before {
+      opacity: 0.55;
+    }
+
+    .example-card,
+    .process-left,
+    .process-card:hover,
+    .process-card:focus-visible,
+    .process-card.is-active {
+      background-color: #ffffff;
+    }
+
+    .examples-section .gallery-button {
+      border-color: rgba(7, 19, 31, 0.18);
+      background: rgba(255, 255, 255, 0.78);
+      color: #0b2b44;
+      box-shadow: 0 12px 28px rgba(7, 19, 31, 0.1);
+    }
+
+    .examples-section .gallery-button:hover,
+    .examples-section .gallery-button:focus-visible {
+      border-color: rgba(18, 104, 166, 0.42);
+      background: #ffffff;
+      color: #07131f;
+      box-shadow: 0 16px 34px rgba(7, 19, 31, 0.14);
+    }
+
+    h1,
+    .why-title,
+    .pricing-card h2,
+    .value-header h2,
+    .extras-header h3,
+    .process-detail-copy h3,
+    .comparison-panel h3,
+    .sticky-cta-copy strong {
+      background: none;
+      -webkit-background-clip: border-box;
+      background-clip: border-box;
+      color: #fff;
+      -webkit-text-fill-color: #fff;
+    }
+
+    /*
+      Hero blueprint image overlay.
+      Uses the chosen compressed JPG concept as a trade drawing texture.
+    */
+    .hero-wrap {
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(7, 19, 31, 0.98) 0%, rgba(7, 19, 31, 0.94) 42%, rgba(7, 19, 31, 0.72) 68%, rgba(7, 19, 31, 0.54) 100%),
+        radial-gradient(ellipse at 74% 38%, rgba(18, 104, 166, 0.42), transparent 54%),
+        radial-gradient(ellipse at 18% 12%, rgba(229, 57, 53, 0.16), transparent 42%),
+        linear-gradient(180deg, #07131f 0%, #0c2a42 48%, #07131f 100%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-wrap:before,
+    .hero-wrap:after {
+      z-index: 0;
+    }
+
+    .hero-wrap:before {
+      inset: 0;
+      opacity: 0.94;
+      background-image:
+        linear-gradient(90deg, rgba(7, 19, 31, 0.26) 0%, rgba(7, 19, 31, 0.36) 34%, rgba(7, 19, 31, 0.72) 67%, rgba(7, 19, 31, 0.98) 100%),
+        linear-gradient(180deg, rgba(7, 19, 31, 0.1) 0%, rgba(7, 19, 31, 0.72) 100%),
+        url("assets/hero-trade-blueprint-bg.jpg");
+      background-position:
+        center,
+        center,
+        left center;
+      background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat;
+      background-size:
+        cover,
+        cover,
+        cover;
+      filter: none;
+      transform: none;
+    }
+
+    .hero-wrap:after {
+      inset: 0;
+      opacity: 1;
+      background:
+        radial-gradient(ellipse at 22% 28%, rgba(18, 104, 166, 0.2), transparent 42%),
+        radial-gradient(ellipse at 6% 8%, rgba(229, 57, 53, 0.14), transparent 34%),
+        radial-gradient(ellipse at 46% 88%, rgba(255, 209, 74, 0.08), transparent 36%);
+      filter: none;
+      transform: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero-wrap:before {
+        opacity: 0.74;
+        background-position:
+          center,
+          center,
+          34% center;
+        background-size:
+          cover,
+          cover,
+          auto 100%;
+      }
+
+      .hero-wrap:after {
+        opacity: 0.72;
+      }
+    }
+
+    /*
+      Section blueprint textures.
+      These low-contrast JPGs keep the trade-signage direction moving through
+      the page without competing with the cards, screenshots or CTA text.
+    */
+    .examples-section,
+    .process-section,
+    .why-section,
+    .pricing-section {
+      isolation: isolate;
+    }
+
+    .examples-section > *,
+    .process-section > *,
+    .why-section > *,
+    .pricing-section > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .examples-section,
+    .process-section {
+      background: #f7fbff;
+    }
+
+    .examples-section:before,
+    .process-section:before {
+      z-index: 0;
+      opacity: 1;
+      background-image:
+        linear-gradient(180deg, rgba(247, 251, 255, 0.82), rgba(247, 251, 255, 0.9)),
+        radial-gradient(ellipse at 14% 22%, rgba(229, 57, 53, 0.09), transparent 36%),
+        radial-gradient(ellipse at 88% 14%, rgba(18, 104, 166, 0.11), transparent 38%),
+        url("assets/section-light-blueprint-bg.jpg");
+      background-position:
+        center,
+        center,
+        center,
+        center;
+      background-size:
+        cover,
+        cover,
+        cover,
+        cover;
+      background-repeat: no-repeat;
+    }
+
+    .examples-section:after,
+    .process-section:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(247, 251, 255, 0.22), rgba(247, 251, 255, 0.64)),
+        linear-gradient(124deg, transparent 0 18%, rgba(229, 57, 53, 0.055) 18.04%, transparent 18.32%),
+        linear-gradient(124deg, transparent 0 86%, rgba(18, 104, 166, 0.065) 86.04%, transparent 86.32%);
+    }
+
+    .process-section:before {
+      background-position:
+        center,
+        center,
+        center,
+        left center;
+    }
+
+    .why-section {
+      background:
+        linear-gradient(180deg, #06101b 0%, #0d2a42 50%, #07131f 100%);
+    }
+
+    .why-section:before {
+      z-index: 0;
+      opacity: 1;
+      background-image:
+        linear-gradient(90deg, rgba(7, 19, 31, 0.86) 0%, rgba(7, 19, 31, 0.68) 44%, rgba(7, 19, 31, 0.92) 100%),
+        radial-gradient(ellipse at 28% 18%, rgba(229, 57, 53, 0.18), transparent 42%),
+        radial-gradient(ellipse at 74% 34%, rgba(18, 104, 166, 0.2), transparent 46%),
+        url("assets/section-why-blueprint-bg.jpg");
+      background-position:
+        center,
+        center,
+        center,
+        center;
+      background-size:
+        cover,
+        cover,
+        cover,
+        cover;
+      background-repeat: no-repeat;
+    }
+
+    .why-section:after {
+      z-index: 1;
+      opacity: 1;
+      background:
+        linear-gradient(180deg, rgba(7, 19, 31, 0.08), rgba(7, 19, 31, 0.56)),
+        radial-gradient(ellipse at center, transparent 0%, rgba(2, 8, 14, 0.5) 82%);
+    }
+
+    .pricing-section {
+      background:
+        linear-gradient(180deg, #07131f 0%, #102f49 52%, #07131f 100%);
+    }
+
+    .pricing-section:before {
+      z-index: 0;
+      opacity: 1;
+      background-image:
+        linear-gradient(90deg, rgba(7, 19, 31, 0.92) 0%, rgba(7, 19, 31, 0.68) 52%, rgba(7, 19, 31, 0.88) 100%),
+        radial-gradient(ellipse at 22% 26%, rgba(229, 57, 53, 0.18), transparent 40%),
+        radial-gradient(ellipse at 86% 18%, rgba(255, 209, 74, 0.08), transparent 34%),
+        url("assets/section-pricing-blueprint-bg.jpg");
+      background-position:
+        center,
+        center,
+        center,
+        center;
+      background-size:
+        cover,
+        cover,
+        cover,
+        cover;
+      background-repeat: no-repeat;
+    }
+
+    .pricing-section:after {
+      z-index: 1;
+      opacity: 1;
+      background:
+        linear-gradient(180deg, rgba(7, 19, 31, 0.02), rgba(7, 19, 31, 0.5)),
+        radial-gradient(ellipse at center, transparent 0%, rgba(2, 8, 14, 0.48) 80%);
+    }
+
+    .sticky-cta.is-expanded {
+      background:
+        linear-gradient(180deg, rgba(7, 19, 31, 0.88), rgba(7, 19, 31, 0.96)),
+        radial-gradient(ellipse at 14% 14%, rgba(229, 57, 53, 0.22), transparent 38%),
+        radial-gradient(ellipse at 86% 24%, rgba(18, 104, 166, 0.28), transparent 42%),
+        url("assets/section-cta-blueprint-bg.jpg") center bottom / cover no-repeat,
+        #07131f;
+    }
+
+    .sticky-footer-cta {
+      background:
+        linear-gradient(90deg, rgba(229, 57, 53, 0.92) 0%, rgba(229, 57, 53, 0.84) 62%, rgba(255, 209, 74, 0.86) 100%),
+        linear-gradient(126deg, transparent 0 79%, rgba(255, 255, 255, 0.16) 79.05%, transparent 79.34%),
+        url("assets/section-cta-blueprint-bg.jpg") center / cover no-repeat;
+    }
+
+    @media (max-width: 900px) {
+      .examples-section:before,
+      .process-section:before {
+        background-position:
+          center,
+          center,
+          center,
+          36% center;
+      }
+
+      .why-section:before,
+      .pricing-section:before {
+        background-position:
+          center,
+          center,
+          center,
+          38% center;
+      }
+    }
+
+    /* Final production fallback stack until the licensed brand webfont is ready. */
+    :root {
+      --font-body: "Avenir Next", "Helvetica Neue", Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .sticky-cta-copy strong,
+    .sticky-cta.is-expanded .sticky-cta-copy strong,
+    .sticky-cta.is-expanded .sticky-footer-cta .sticky-cta-copy strong {
+      font-weight: 900;
+      letter-spacing: 0.018em;
     }
