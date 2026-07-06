@@ -4084,6 +4084,21 @@
       letter-spacing: 0;
     }
 
+    .price-monthly {
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .price-monthly strong {
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .price-monthly span {
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
     /*
       Display casing and pale section polish.
       Keeps the bolder signage feel, but makes the light panels less creamy.
