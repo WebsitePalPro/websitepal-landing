@@ -128,8 +128,8 @@
       margin: 0;
       color: rgba(255, 248, 251, 0.76);
       font-size: clamp(1.05rem, 1.7vw, 1.32rem);
-      font-weight: 750;
-      line-height: 1.45;
+      font-weight: 400;
+      line-height: 1.58;
     }
 
     .legal-doc {
@@ -164,8 +164,8 @@
       padding-left: 22px;
       color: rgba(255, 248, 251, 0.74);
       font-size: clamp(1rem, 1.45vw, 1.15rem);
-      font-weight: 700;
-      line-height: 1.52;
+      font-weight: 400;
+      line-height: 1.58;
     }
 
     .legal-doc li::marker {
@@ -174,7 +174,7 @@
 
     .legal-doc a {
       color: white;
-      font-weight: 900;
+      font-weight: 600;
       text-decoration: underline;
       text-decoration-color: rgba(255, 129, 47, 0.7);
       text-decoration-thickness: 2px;
