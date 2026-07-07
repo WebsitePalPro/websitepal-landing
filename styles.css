@@ -4603,3 +4603,25 @@
       width: 18px;
       text-align: center;
     }
+
+    .sticky-cta-copy strong,
+    .sticky-cta.is-expanded .sticky-cta-copy strong,
+    .sticky-cta.is-expanded .sticky-footer-cta .sticky-cta-copy strong {
+      font-weight: 800;
+      font-style: italic;
+      letter-spacing: var(--ls-hero, -0.012em);
+    }
+
+    .btn {
+      font-size: clamp(1.04rem, 0.96vw, 1.12rem);
+      font-weight: 600;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 861px) {
+      .nav-links {
+        padding-left: 26px;
+        padding-right: 26px;
+      }
+    }
