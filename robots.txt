@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://websitepal.pro/sitemap.xml
+Sitemap: https://www.websitepal.pro/sitemap.xml
