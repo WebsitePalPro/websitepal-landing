@@ -4684,7 +4684,7 @@
         rgba(7, 19, 31, 0.34);
       color: rgba(255, 250, 240, 0.92);
       font-size: clamp(0.84rem, 0.82vw, 0.98rem);
-      font-weight: 600;
+      font-weight: 400;
       font-style: italic;
       line-height: 1;
       white-space: nowrap;
@@ -4757,4 +4757,32 @@
       .trade-track {
         animation: none;
       }
+    }
+
+    .legal-card h1 {
+      font-weight: 800;
+      font-style: italic;
+      letter-spacing: var(--ls-display, -0.008em);
+      line-height: 0.96;
+      text-transform: uppercase;
+    }
+
+    .legal-doc h2 {
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0;
+      line-height: 1.08;
+      text-transform: uppercase;
+    }
+
+    .legal-back,
+    .legal-doc .legal-meta {
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0;
+    }
+
+    .legal-back {
+      text-transform: uppercase;
+      font-size: 0.86rem;
     }
