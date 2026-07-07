@@ -4582,3 +4582,24 @@
       font-weight: 600;
       font-style: normal;
     }
+
+    .sticky-logo {
+      border-radius: 22px 14px 0 22px;
+    }
+
+    .sticky-footer-links a {
+      display: grid;
+      grid-template-columns: 18px minmax(0, auto);
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+      width: fit-content;
+      text-align: left;
+    }
+
+    .sticky-footer-links i {
+      display: grid;
+      place-items: center;
+      width: 18px;
+      text-align: center;
+    }
