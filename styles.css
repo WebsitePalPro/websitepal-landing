@@ -4990,13 +4990,17 @@
 
       .site-logo {
         width: 98px;
-        margin-top: 5px;
+      }
+
+      .site-header:not(.is-scrolled) .site-nav {
+        padding-top: 5px;
+      }
+
+      .site-header:not(.is-scrolled) .site-logo {
         margin-right: 5px;
       }
 
       .site-header.is-scrolled .site-logo {
-        top: 5px;
-        right: 5px;
         width: 86px;
         padding: 5px;
         border-color: rgba(255, 255, 255, 0.22);
