@@ -4990,10 +4990,16 @@
 
       .site-logo {
         width: 98px;
+        margin-top: 5px;
+        margin-right: 5px;
       }
 
       .site-header.is-scrolled .site-logo {
+        top: 5px;
+        right: 5px;
         width: 86px;
         padding: 5px;
+        border-color: rgba(255, 255, 255, 0.22);
+        background: rgba(2, 10, 18, 0.96);
       }
     }
