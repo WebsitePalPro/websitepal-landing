@@ -857,6 +857,25 @@
       pointer-events: none;
     }
 
+    .example-card-title {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border-radius: 999px;
+      padding: 7px 11px;
+      background: rgba(7, 19, 31, 0.82);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      line-height: 1;
+      pointer-events: none;
+      text-transform: uppercase;
+    }
+
     .example-card:after {
       display: none;
     }

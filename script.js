@@ -125,7 +125,6 @@
       ".trade-item",
       ".examples-copy",
       ".gallery-controls",
-      ".example-card",
       ".gallery-hint",
       ".feature-card",
       ".why-copy",
