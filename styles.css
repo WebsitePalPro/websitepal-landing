@@ -345,7 +345,7 @@
       background: var(--logo-tile);
       box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
       line-height: 1;
-      transition: width 220ms ease, height 220ms ease, border-radius 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+      transition: width 220ms ease, height 220ms ease, border-radius 220ms ease, transform 220ms ease, box-shadow 220ms ease, top 220ms ease, right 220ms ease;
     }
 
     .site-logo img {
@@ -4957,6 +4957,17 @@
         padding: 5px;
         background: rgba(2, 10, 18, 0.96);
       }
+    }
+
+    /* Keep the brand mark comfortably inset, then dock it as a floating sticky control. */
+    .site-header:not(.is-scrolled) .site-nav {
+      padding-top: clamp(12px, 1vw, 18px);
+    }
+
+    .site-header.is-scrolled .site-logo {
+      top: clamp(8px, 0.6vw, 12px);
+      right: clamp(8px, 0.6vw, 12px);
+      border-radius: 14px;
     }
 
 
