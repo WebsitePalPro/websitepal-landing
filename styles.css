@@ -5048,3 +5048,97 @@
     .process-detail-copy h3 {
       font-weight: 800;
     }
+
+    /* Portal-inspired button interactions for the landing page. */
+    .btn:hover {
+      transform: none;
+    }
+
+    .btn-primary,
+    .sticky-cta .btn-primary {
+      border-color: transparent;
+      background-color: #e53935;
+      background-image: linear-gradient(
+        105deg,
+        #e53935 0%,
+        #e53935 38%,
+        #f2b52b 62%,
+        #ffd14a 100%
+      );
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 220% 100%;
+      color: #07131f;
+      box-shadow: 0 20px 48px rgba(229, 57, 53, 0.3);
+      transition:
+        background-position 480ms cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 220ms ease,
+        box-shadow 240ms ease,
+        transform 240ms ease;
+    }
+
+    .btn-secondary {
+      border-color: rgba(255, 209, 74, 0.72);
+      background-color: rgba(7, 19, 31, 0.62);
+      background-image: linear-gradient(var(--yellow), var(--yellow));
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: 100% 0;
+      color: white;
+      transition:
+        background-size 280ms cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 220ms ease,
+        box-shadow 240ms ease,
+        color 220ms ease,
+        transform 240ms ease;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .btn-primary:hover {
+        background-position: right center;
+        color: #07131f;
+        box-shadow: 0 26px 58px rgba(229, 57, 53, 0.38);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--yellow);
+        background-size: 100% 100%;
+        color: #07131f;
+        box-shadow: 0 20px 42px rgba(255, 209, 74, 0.2);
+        transform: translateY(-2px);
+      }
+    }
+
+    .btn-primary:focus-visible {
+      background-position: right center;
+      color: #07131f;
+      box-shadow: 0 0 0 4px rgba(255, 209, 74, 0.24), 0 26px 58px rgba(229, 57, 53, 0.38);
+      outline: 2px solid var(--yellow);
+      outline-offset: 3px;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary:focus-visible {
+      border-color: var(--yellow);
+      background-size: 100% 100%;
+      color: #07131f;
+      box-shadow: 0 0 0 4px rgba(255, 209, 74, 0.2), 0 20px 42px rgba(255, 209, 74, 0.2);
+      outline: 2px solid var(--yellow);
+      outline-offset: 3px;
+      transform: translateY(-2px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn-primary,
+      .btn-secondary {
+        transition: none;
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus-visible,
+      .btn-secondary:hover,
+      .btn-secondary:focus-visible {
+        transform: none;
+      }
+    }
