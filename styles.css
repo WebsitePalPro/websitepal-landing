@@ -2170,11 +2170,14 @@
     .sticky-whatsapp-icon {
       display: grid;
       place-items: center;
-      width: 46px;
-      height: 46px;
-      border-radius: 10px;
-      background: rgba(37, 211, 102, 0.13);
-      color: #7ff1a7;
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.15), transparent 36%),
+        linear-gradient(135deg, rgba(255, 129, 47, 0.28), rgba(255, 46, 141, 0.18));
+      color: var(--yellow);
     }
 
     .sticky-whatsapp-icon svg {
@@ -3965,11 +3968,7 @@
       border-left: 1px solid rgba(255, 255, 255, 0.11);
     }
 
-    .sticky-whatsapp-icon i {
-      font-size: 1.45rem;
-      line-height: 1;
-    }
-
+    .sticky-whatsapp-icon,
     .sticky-contact-icon {
       background:
         radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.15), transparent 36%),
@@ -4008,6 +4007,7 @@
       transform: none;
     }
 
+    .sticky-whatsapp-icon i,
     .sticky-contact-icon i,
     .sticky-footer-links i {
       font-size: 1rem;
