@@ -5105,6 +5105,32 @@
       transform: translateY(-2px);
     }
 
+    /* Dark CTA button stays distinct against the red-to-yellow sticky bar. */
+    .sticky-cta .btn-primary {
+      background-color: #07131f;
+      background-image: linear-gradient(
+        105deg,
+        #07131f 0%,
+        #07131f 38%,
+        #0d2a42 62%,
+        #102f49 100%
+      );
+      color: #fff;
+      box-shadow: 0 20px 48px rgba(2, 8, 14, 0.34);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .sticky-cta .btn-primary:hover {
+        color: #fff;
+        box-shadow: 0 26px 58px rgba(2, 8, 14, 0.44);
+      }
+    }
+
+    .sticky-cta .btn-primary:focus-visible {
+      color: #fff;
+      box-shadow: 0 0 0 4px rgba(255, 209, 74, 0.24), 0 26px 58px rgba(2, 8, 14, 0.44);
+    }
+
     .btn-secondary:focus-visible {
       border-color: var(--yellow);
       background-size: 100% 100%;
