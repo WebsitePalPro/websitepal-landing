@@ -1732,21 +1732,6 @@
         rgba(13, 13, 14, 0.84);
     }
 
-    .pricing-card:before {
-      content: "WordPress";
-      position: absolute;
-      top: 18px;
-      right: -10px;
-      color: rgba(255, 255, 255, 0.035);
-      font-size: clamp(3.4rem, 5.8vw, 7.8rem);
-      font-weight: 1000;
-      font-style: italic;
-      line-height: 1;
-      letter-spacing: -0.09em;
-      text-transform: uppercase;
-      pointer-events: none;
-    }
-
     .pricing-kicker {
       display: inline-flex;
       width: max-content;
@@ -4692,8 +4677,9 @@
     }
 
     .trade-chip {
-      --trade-chip-a: rgba(73, 159, 255, 0.14);
-      --trade-chip-b: rgba(255, 255, 255, 0.03);
+      --trade-chip-a: rgba(255, 209, 74, 0.15);
+      --trade-chip-b: rgba(229, 57, 53, 0.045);
+      --trade-chip-icon: var(--yellow);
       display: inline-flex;
       align-items: center;
       gap: 9px;
@@ -4717,60 +4703,16 @@
       display: grid;
       place-items: center;
       width: 18px;
-      color: rgba(255, 255, 255, 0.92);
+      color: var(--trade-chip-icon);
       font-size: 0.95em;
       line-height: 1;
       text-shadow: 0 0 14px rgba(255, 255, 255, 0.14);
     }
 
-    .trade-chip:nth-child(10n + 1) {
-      --trade-chip-a: rgba(73, 159, 255, 0.16);
-      --trade-chip-b: rgba(47, 219, 196, 0.06);
-    }
-
-    .trade-chip:nth-child(10n + 2) {
-      --trade-chip-a: rgba(255, 209, 74, 0.14);
-      --trade-chip-b: rgba(125, 224, 102, 0.06);
-    }
-
-    .trade-chip:nth-child(10n + 3) {
-      --trade-chip-a: rgba(229, 57, 53, 0.14);
-      --trade-chip-b: rgba(255, 118, 177, 0.06);
-    }
-
-    .trade-chip:nth-child(10n + 4) {
-      --trade-chip-a: rgba(165, 112, 255, 0.14);
-      --trade-chip-b: rgba(75, 188, 255, 0.06);
-    }
-
-    .trade-chip:nth-child(10n + 5) {
-      --trade-chip-a: rgba(255, 132, 65, 0.14);
-      --trade-chip-b: rgba(255, 221, 97, 0.06);
-    }
-
-    .trade-chip:nth-child(10n + 6) {
-      --trade-chip-a: rgba(55, 206, 142, 0.14);
-      --trade-chip-b: rgba(88, 171, 255, 0.06);
-    }
-
-    .trade-chip:nth-child(10n + 7) {
-      --trade-chip-a: rgba(255, 103, 103, 0.13);
-      --trade-chip-b: rgba(255, 187, 86, 0.06);
-    }
-
-    .trade-chip:nth-child(10n + 8) {
-      --trade-chip-a: rgba(86, 115, 255, 0.14);
-      --trade-chip-b: rgba(255, 93, 205, 0.06);
-    }
-
-    .trade-chip:nth-child(10n + 9) {
-      --trade-chip-a: rgba(48, 213, 255, 0.13);
-      --trade-chip-b: rgba(255, 255, 255, 0.035);
-    }
-
-    .trade-chip:nth-child(10n) {
-      --trade-chip-a: rgba(255, 180, 64, 0.13);
-      --trade-chip-b: rgba(229, 57, 53, 0.065);
+    .trade-chip:nth-child(even) {
+      --trade-chip-a: rgba(229, 57, 53, 0.15);
+      --trade-chip-b: rgba(255, 209, 74, 0.045);
+      --trade-chip-icon: var(--pink);
     }
 
     @keyframes trade-marquee {
@@ -5026,28 +4968,17 @@
       }
     }
 
-    /* Temporary holding page: keep the landing content in place, but hide it visually. */
-    body#top {
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at 22% 18%, rgba(244, 52, 48, 0.24), transparent 32%),
-        radial-gradient(circle at 78% 72%, rgba(255, 205, 68, 0.18), transparent 30%),
-        linear-gradient(135deg, #061523 0%, #09283c 54%, #03070b 100%);
+
+    .value-icon,
+    .value-item:nth-child(2n) .value-icon,
+    .value-item:nth-child(3n) .value-icon {
+      color: var(--yellow);
     }
 
-    body#top > :not(.landing-hold-page) {
-      display: none !important;
-    }
-
-    .landing-hold-page {
-      display: grid;
-      min-height: 100vh;
-      place-items: center;
-      padding: clamp(32px, 8vw, 96px);
-    }
-
-    .landing-hold-page img {
-      width: min(340px, 62vw);
-      height: auto;
-      filter: drop-shadow(0 26px 60px rgba(0, 0, 0, 0.42));
+    .value-icon i {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--yellow) 8%, var(--pink) 92%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
