@@ -4679,7 +4679,6 @@
     .trade-chip {
       --trade-chip-a: rgba(255, 209, 74, 0.15);
       --trade-chip-b: rgba(229, 57, 53, 0.045);
-      --trade-chip-icon: var(--yellow);
       display: inline-flex;
       align-items: center;
       gap: 9px;
@@ -4703,16 +4702,15 @@
       display: grid;
       place-items: center;
       width: 18px;
-      color: var(--trade-chip-icon);
-      font-size: 0.95em;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.82em;
       line-height: 1;
-      text-shadow: 0 0 14px rgba(255, 255, 255, 0.14);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
 
     .trade-chip:nth-child(even) {
       --trade-chip-a: rgba(229, 57, 53, 0.15);
       --trade-chip-b: rgba(255, 209, 74, 0.045);
-      --trade-chip-icon: var(--pink);
     }
 
     @keyframes trade-marquee {
