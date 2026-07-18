@@ -5044,6 +5044,7 @@
       align-items: start;
     }
 
-    .process-card h3 {
-      font-weight: 700;
+    .process-card h3,
+    .process-detail-copy h3 {
+      font-weight: 800;
     }
