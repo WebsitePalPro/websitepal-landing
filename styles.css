@@ -54,6 +54,15 @@
 
     @font-face {
       font-family: "Zona Pro";
+      src: url("assets/fonts/ZonaPro-BoldItalic.woff2") format("woff2"),
+        url("assets/fonts/ZonaPro-BoldItalic.woff") format("woff");
+      font-weight: 700;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Zona Pro";
       src: url("assets/fonts/ZonaPro-ExtraBold.woff2") format("woff2"),
         url("assets/fonts/ZonaPro-ExtraBold.woff") format("woff");
       font-weight: 800;
@@ -5029,4 +5038,12 @@
     .nav-links a:focus-visible:before {
       opacity: 1;
       transform: scale(1);
+    }
+
+    .feature-card {
+      align-items: start;
+    }
+
+    .process-card h3 {
+      font-weight: 700;
     }
