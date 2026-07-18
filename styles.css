@@ -4968,6 +4968,9 @@
       top: clamp(8px, 0.6vw, 12px);
       right: clamp(8px, 0.6vw, 12px);
       border-radius: 14px;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
     }
 
 
