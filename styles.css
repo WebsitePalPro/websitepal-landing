@@ -4929,11 +4929,13 @@
       height: auto;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 680px) {
       .nav-links {
         display: none;
       }
+    }
 
+    @media (max-width: 480px) {
       .site-nav {
         grid-template-columns: 1fr;
       }
