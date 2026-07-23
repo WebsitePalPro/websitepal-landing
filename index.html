@@ -724,6 +724,34 @@
     </div>
   </aside>
 
+  <aside
+    class="whatsapp-prompt"
+    data-whatsapp-prompt
+    role="dialog"
+    aria-modal="false"
+    aria-labelledby="whatsapp-prompt-title"
+    aria-describedby="whatsapp-prompt-description"
+    hidden
+  >
+    <button class="whatsapp-prompt-close" type="button" data-whatsapp-prompt-dismiss aria-label="Close WhatsApp prompt">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <span class="whatsapp-prompt-kicker">Quick question?</span>
+    <h2 id="whatsapp-prompt-title">Want to talk to a human first?</h2>
+    <p id="whatsapp-prompt-description">Totally fair. Drop us a WhatsApp and ask anything before you sign up — no hard sell, no awkward sales call.</p>
+    <a
+      class="whatsapp-prompt-action"
+      data-whatsapp-prompt-action
+      href="https://wa.me/447557354110?text=Hi%20WebsitePal%2C%20I%27d%20like%20to%20chat%20about%20a%20website%20project%20before%20signing%20up."
+      target="_blank"
+      rel="noopener"
+    >
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      Chat to WebsitePal
+    </a>
+    <button class="whatsapp-prompt-later" type="button" data-whatsapp-prompt-dismiss>Maybe later</button>
+  </aside>
+
   <script src="script.js" defer></script>
 </body>
 </html>
