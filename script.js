@@ -176,66 +176,6 @@
 
     const siteHeader = document.querySelector("[data-site-header]");
     const stickyCta = document.querySelector("[data-sticky-cta]");
-    const whatsappPrompt = document.querySelector("[data-whatsapp-prompt]");
-    const whatsappPromptDismissButtons = document.querySelectorAll("[data-whatsapp-prompt-dismiss]");
-    const whatsappPromptAction = document.querySelector("[data-whatsapp-prompt-action]");
-    const whatsappPromptDismissalKey = "websitepalWhatsappPromptDismissedUntil";
-    const whatsappPromptDismissalDuration = 7 * 24 * 60 * 60 * 1000;
-
-    const getWhatsappPromptDismissedUntil = () => {
-      try {
-        return Number(window.localStorage.getItem(whatsappPromptDismissalKey)) || 0;
-      } catch {
-        return 0;
-      }
-    };
-
-    const rememberWhatsappPromptDismissal = () => {
-      try {
-        window.localStorage.setItem(
-          whatsappPromptDismissalKey,
-          String(Date.now() + whatsappPromptDismissalDuration)
-        );
-      } catch {
-        // The prompt still closes when storage is unavailable.
-      }
-    };
-
-    const showWhatsappPrompt = () => {
-      if (
-        !whatsappPrompt ||
-        whatsappPrompt.classList.contains("is-visible") ||
-        stickyCta?.classList.contains("is-expanded") ||
-        getWhatsappPromptDismissedUntil() > Date.now()
-      ) {
-        return false;
-      }
-
-      whatsappPrompt.hidden = false;
-      window.requestAnimationFrame(() => {
-        window.requestAnimationFrame(() => whatsappPrompt.classList.add("is-visible"));
-      });
-      return true;
-    };
-
-    const hideWhatsappPrompt = ({ remember = true } = {}) => {
-      if (!whatsappPrompt) return;
-      if (remember) rememberWhatsappPromptDismissal();
-      whatsappPrompt.classList.remove("is-visible");
-      window.setTimeout(() => {
-        if (!whatsappPrompt.classList.contains("is-visible")) whatsappPrompt.hidden = true;
-      }, 260);
-    };
-
-    whatsappPromptDismissButtons.forEach((button) => {
-      button.addEventListener("click", () => hideWhatsappPrompt());
-    });
-
-    whatsappPromptAction?.addEventListener("click", () => hideWhatsappPrompt());
-
-    if (whatsappPrompt && getWhatsappPromptDismissedUntil() <= Date.now()) {
-      window.setTimeout(showWhatsappPrompt, 8000);
-    }
 
     const updateSiteHeader = () => {
       if (!siteHeader) return;
@@ -248,7 +188,6 @@
       const footerTrigger = stickyCta.offsetTop - 90;
       const isExpanded = viewportBottom >= footerTrigger;
       stickyCta.classList.toggle("is-expanded", isExpanded);
-      whatsappPrompt?.classList.toggle("is-footer-hidden", isExpanded);
     };
 
     let scrollTicking = false;
