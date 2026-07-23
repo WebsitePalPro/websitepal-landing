@@ -234,18 +234,7 @@
     whatsappPromptAction?.addEventListener("click", () => hideWhatsappPrompt());
 
     if (whatsappPrompt && getWhatsappPromptDismissedUntil() <= Date.now()) {
-      const promptStartedAt = Date.now();
-      window.setTimeout(showWhatsappPrompt, 20000);
-
-      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-        const handleExitIntent = (event) => {
-          if (event.clientY > 8 || Date.now() - promptStartedAt < 8000) return;
-          if (showWhatsappPrompt()) {
-            document.documentElement.removeEventListener("mouseleave", handleExitIntent);
-          }
-        };
-        document.documentElement.addEventListener("mouseleave", handleExitIntent);
-      }
+      window.setTimeout(showWhatsappPrompt, 8000);
     }
 
     const updateSiteHeader = () => {
