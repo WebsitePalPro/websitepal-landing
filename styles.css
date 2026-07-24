@@ -5206,12 +5206,12 @@
     }
 
     .sticky-cta .sticky-cta-actions .btn-primary:not(.sticky-whatsapp-action) {
-      border-color: rgba(255, 209, 74, 0.5);
+      border: 0;
       background-color: #e53935;
       background-image: linear-gradient(105deg, #e53935 0%, #e53935 38%, #f2b52b 62%, #ffd14a 100%);
       background-size: 220% 100%;
-      background-position: 0 0;
-      color: #07131f;
+      background-position: left center;
+      color: #fff;
       box-shadow: 0 16px 36px rgba(229, 57, 53, 0.3);
     }
 
@@ -5224,7 +5224,7 @@
 
     @media (hover: hover) and (pointer: fine) {
       .sticky-cta .sticky-cta-actions .btn-primary:not(.sticky-whatsapp-action):hover {
-        background-position: 100% 0;
+        background-position: right center;
         color: #07131f;
         box-shadow: 0 20px 44px rgba(229, 57, 53, 0.38);
       }
