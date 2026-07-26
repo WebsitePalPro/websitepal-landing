@@ -2453,7 +2453,7 @@
       .analytics-consent {
         left: 12px;
         right: 12px;
-        bottom: 168px;
+        bottom: 180px;
         grid-template-columns: minmax(0, 1fr) auto;
         gap: 10px;
         width: auto;
