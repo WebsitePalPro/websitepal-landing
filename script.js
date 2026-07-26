@@ -1,3 +1,88 @@
+    const analyticsPreferenceKey = "websitepal_analytics_preference";
+    const analyticsMeasurementId = "G-9VFD0FP8G8";
+    const analyticsBanner = document.querySelector("[data-analytics-banner]");
+    const analyticsAccept = document.querySelector("[data-analytics-accept]");
+    const analyticsReject = document.querySelector("[data-analytics-reject]");
+    const analyticsManageButtons = document.querySelectorAll("[data-analytics-manage]");
+    let analyticsLoaded = false;
+
+    const readAnalyticsPreference = () => {
+      try {
+        return window.localStorage.getItem(analyticsPreferenceKey);
+      } catch {
+        return null;
+      }
+    };
+
+    const saveAnalyticsPreference = (preference) => {
+      try {
+        window.localStorage.setItem(analyticsPreferenceKey, preference);
+      } catch {
+        // If browser storage is unavailable, keep analytics disabled by default.
+      }
+    };
+
+    const showAnalyticsChoices = () => {
+      if (!analyticsBanner) return;
+      analyticsBanner.hidden = false;
+      analyticsBanner.classList.add("is-visible");
+    };
+
+    const hideAnalyticsChoices = () => {
+      if (!analyticsBanner) return;
+      analyticsBanner.classList.remove("is-visible");
+      analyticsBanner.hidden = true;
+    };
+
+    const loadAnalytics = () => {
+      if (analyticsLoaded) return;
+      analyticsLoaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      window.gtag("config", analyticsMeasurementId, { anonymize_ip: true });
+
+      const analyticsScript = document.createElement("script");
+      analyticsScript.async = true;
+      analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analyticsMeasurementId)}`;
+      document.head.appendChild(analyticsScript);
+    };
+
+    const removeAnalyticsCookies = () => {
+      const cookieNames = ["_ga", `_ga_${analyticsMeasurementId.replace(/^G-/, "")}`];
+      cookieNames.forEach((name) => {
+        document.cookie = `${name}=; Max-Age=0; Path=/; SameSite=Lax`;
+        document.cookie = `${name}=; Max-Age=0; Path=/; Domain=.websitepal.pro; SameSite=Lax`;
+      });
+    };
+
+    analyticsAccept?.addEventListener("click", () => {
+      saveAnalyticsPreference("accepted");
+      hideAnalyticsChoices();
+      loadAnalytics();
+    });
+
+    analyticsReject?.addEventListener("click", () => {
+      saveAnalyticsPreference("rejected");
+      if (typeof window.gtag === "function") {
+        window.gtag("consent", "update", { analytics_storage: "denied" });
+      }
+      removeAnalyticsCookies();
+      hideAnalyticsChoices();
+    });
+
+    analyticsManageButtons.forEach((button) => {
+      button.addEventListener("click", showAnalyticsChoices);
+    });
+
+    if (readAnalyticsPreference() === "accepted") {
+      loadAnalytics();
+    } else if (readAnalyticsPreference() !== "rejected") {
+      showAnalyticsChoices();
+    }
+
     const gallery = document.querySelector("[data-example-gallery]");
     const previousButton = document.querySelector("[data-gallery-prev]");
     const nextButton = document.querySelector("[data-gallery-next]");
