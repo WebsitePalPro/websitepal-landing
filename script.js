@@ -79,8 +79,6 @@
 
     if (readAnalyticsPreference() === "accepted") {
       loadAnalytics();
-    } else if (readAnalyticsPreference() !== "rejected") {
-      showAnalyticsChoices();
     }
 
     const gallery = document.querySelector("[data-example-gallery]");
